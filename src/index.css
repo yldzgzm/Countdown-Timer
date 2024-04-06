@@ -1,13 +1,83 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.fullscreen {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("./assets/bag.jpg");
+    background-size: cover;
+    background-position: center;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.text {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+}
+
+.texts {
+    color: #d5a47b;
+    font-size: 7vh;
+    font-weight: bold;
+}
+
+.timer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    overflow: auto;
+    top: 40%;
+    transform: translateY(-50%);
+
+}
+
+.times {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin:5%;
+    margin-top:0;
+}
+
+.number {
+    font-size: 8vh;
+    font-weight: bold;
+    color: #d5a47b;
+}
+
+.unit {
+    font-size: 3vh;
+    font-weight: bold;
+    color: #d5a47b;
+}
+
+@media screen and (max-width: 768px) {
+    .texts {
+        font-size: 3vh;
+    }
+
+    .number {
+        font-size: 3vh;
+    }
+
+    .unit {
+        font-size: 1vh;
+    }
+
+    .times {
+        margin:2;
+    }
 }
